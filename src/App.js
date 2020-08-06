@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
+import 'typeface-roboto';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
+import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
+import Routelink from './components/Routelink';
+import AboutPage from './components/AboutPage';
+import InboxPage from './components/InboxPage';
+
+const history = createBrowserHistory();
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div className="conteiner">
+<Router history={createBrowserHistory}>
+        <Route path='/' component={Routelink} >
+            <Route path='/' component={Routelink} /> 
+            <Route path='/about' component={AboutPage} />
+            <Route path='/inbox' component={InboxPage}/>
+        </Route>    
+        
+    </Router>    
+
+</div>   
   );
 }
 
