@@ -1,5 +1,10 @@
 .conteiner{
   width: 100%;
   height: 100vh;
-  background: url(./image/bg_conteiner.jpg);background-position: center;background-size: cover;background-repeat: no-repeat;
+ 
+}
+.conteiner_content{
+  width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
 }

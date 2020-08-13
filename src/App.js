@@ -5,29 +5,29 @@ import 'typeface-roboto';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
-import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
-import Routelink from './components/Routelink';
-import AboutPage from './components/AboutPage';
-import InboxPage from './components/InboxPage';
+import AboutPage from './pages/AboutPage';
+import Home from './pages/Home';
+import InboxPage from './pages/InboxPage';
+import MenuSite from './menu/MenuSite';
+
 
 const history = createBrowserHistory();
 
 
 function App() {
-  
-  return (
-<div className="conteiner">
-<Router history={createBrowserHistory}>
-        <Route path='/' component={Routelink} >
-            <Route path='/' component={Routelink} /> 
-            <Route path='/about' component={AboutPage} />
-            <Route path='/inbox' component={InboxPage}/>
-        </Route>    
-        
-    </Router>    
 
-</div>   
+  return (
+    <div className="conteiner">
+      <Router history={createBrowserHistory}>
+      <div className="conteiner_content">
+        <MenuSite />
+      </div>  
+        <Route exact path='/' component={Home} />
+        <Route exact path='/about' component={AboutPage} />
+        <Route exact path='/service' component={InboxPage} />
+      </Router>
+
+    </div>
   );
 }
 

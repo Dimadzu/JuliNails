@@ -1,17 +1,14 @@
 import React from 'react';
-
-import './AboutPage.less';
-
-const AboutPage = ()=>{
-  
+const InboxPage = ()=>{
+   
         return (
-            <div className='AboutPage'>
+            <div className='Service'>
                 <h2 className='title'>
                     This is messages application
                 </h2>
 
                 <div className='text'>
-                    <p>Etiam imperdiet imperdiet orci. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Praesent egestas tristique nibh. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Suspendisse potenti.</p>
+                    <p>vbvvvvvvvvvvvvva vel, aliquet nec, vulputate eget, arcu. Praesent egestas tristique nibh. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Suspendisse potenti.</p>
 
                     <p>Fusce commodo aliquam arcu. Sed fringilla mauris sit amet nibh. Curabitur ullamcorper ultricies nisi. Nunc sed turpis. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.</p>
 
@@ -26,4 +23,5 @@ const AboutPage = ()=>{
     
 };
 
-export default AboutPage;
+
+export default InboxPage;

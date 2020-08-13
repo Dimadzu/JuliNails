@@ -1,6 +1,8 @@
 import React from 'react';
-const InboxPage = ()=>{
-   
+
+
+const AboutPage = ()=>{
+  
         return (
             <div className='AboutPage'>
                 <h2 className='title'>
@@ -8,7 +10,7 @@ const InboxPage = ()=>{
                 </h2>
 
                 <div className='text'>
-                    <p>vbvvvvvvvvvvvvva vel, aliquet nec, vulputate eget, arcu. Praesent egestas tristique nibh. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Suspendisse potenti.</p>
+                    <p>Etiam imperdiet imperdiet orci. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Praesent egestas tristique nibh. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Suspendisse potenti.</p>
 
                     <p>Fusce commodo aliquam arcu. Sed fringilla mauris sit amet nibh. Curabitur ullamcorper ultricies nisi. Nunc sed turpis. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.</p>
 
@@ -23,5 +25,4 @@ const InboxPage = ()=>{
     
 };
 
-
-export default InboxPage;
+export default AboutPage;
