@@ -6,18 +6,50 @@ const InboxPage = ()=>{
                 <h2 className='title'>
                     This is messages application
                 </h2>
-
-                <div className='text'>
-                    <p>vbvvvvvvvvvvvvva vel, aliquet nec, vulputate eget, arcu. Praesent egestas tristique nibh. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Suspendisse potenti.</p>
-
-                    <p>Fusce commodo aliquam arcu. Sed fringilla mauris sit amet nibh. Curabitur ullamcorper ultricies nisi. Nunc sed turpis. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.</p>
-
-                    <p>Nam eget dui. In hac habitasse platea dictumst. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Quisque ut nisi. Duis leo.</p>
-
-                    <p>Cras varius. Donec vitae sapien ut libero venenatis faucibus. Etiam ultricies nisi vel augue. In consectetuer turpis ut velit. Nam at tortor in tellus interdum sagittis.</p>
-
-                    <p>Nunc sed turpis. Morbi mollis tellus ac sapien. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla porta dolor.</p>
-                </div>
+<div className="icon">
+  <svg class="gradient" xmlns="http://www.w3.org/2000/svg"  width="166" height="131" viewBox="0 0 166 131">
+    <defs>
+      <linearGradient id="a" y1="65.5" x2="166" y2="65.5" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#ff0"/>
+        <stop offset="1" stop-color="aqua"/>
+      </linearGradient>
+      <linearGradient id="b" x1="125.07" y1="-22.36" x2="39.19" y2="126.38" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#ff0"/>
+        <stop offset="1" stop-color="aqua"/>
+      </linearGradient>
+      <linearGradient id="c" x1="148.87" y1="116.37" x2="17.13" y2="-15.37" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#ff0"/>
+        <stop offset="1" stop-color="aqua"/>
+      </linearGradient>
+      <linearGradient id="d" x1="-7.92" y1="24.22" x2="169.54" y2="88.81" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#ff0"/>
+        <stop offset="1" stop-color="aqua"/>
+      </linearGradient>
+    </defs>
+    <g class="border">
+      <path d="M163,3V98H48v30L23,98H3V3H163Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#a)"/>
+      <path d="M163,3V98H48v30L23,98H3V3H163Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#b)"/>
+      <path d="M163,3V98H48v30L23,98H3V3H163Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#c)"/>
+      <path d="M163,3V98H48v30L23,98H3V3H163Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#d)"/>
+    </g>
+    <g class="line line--1">
+      <path d="M141.35,22.5H21.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#a)"/>
+      <path d="M141.35,22.5H21.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#c)"/>
+    </g>
+    <g class="line line--2">
+      <path d="M141.35,42.5H21.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#b)"/>
+      <path d="M141.35,42.5H21.25" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#d)"/>
+    </g>
+    <g class="line line--3">
+      <path d="M91.26,62.5h-70" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#c)"/>
+      <path d="M91.26,62.5h-70" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" stroke="url(#a)"/>
+    </g>
+  </svg>
+  <svg class="outer" xmlns="http://www.w3.org/2000/svg" width="166.86" height="101.86" viewBox="0 0 166.86 101.86">
+    <title>outer</title>
+    <path d="M23.43,98.43h-20v-95h160v20" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.86"/>
+  </svg>
+</div>
             </div>
         );
     

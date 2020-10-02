@@ -1,0 +1,121 @@
+@outer_length: 300px;
+@path_length: 555px;
+@line_length: 121px;
+@line_length--sml: 70px;
+
+@easing: cubic-bezier(.55, 0, .1, 1);
+@fast: .2s;
+
+body{
+  background-color: #282828;
+  font-family: 'Montserrat', sans-serif;
+}
+
+svg{
+  cursor: pointer;
+  left: 50%;
+  position: absolute;
+  top: 50%;  
+  transition: transform @fast @easing;
+  will-change: transform;
+}
+
+.icon{
+  &:hover{
+    .outer{
+      transform: translateX(-50%) translateY(-50%) translateX(-11px) translateY(-19px);
+    }
+    .gradient{
+      transform: translateX(-50%) translateY(-50%) translateX(11px) translateY(19px);
+    }
+  }
+}
+
+.outer{
+  transform: translateX(-50%) translateY(-50%) translateX(-15px) translateY(-22.5px);
+  z-index: 1;
+  
+  path{
+    stroke-dasharray: @outer_length;
+    stroke-dashoffset: -@outer_length;
+    transition: stroke-dashoffset 2.8s linear;
+    
+    &.stroke{
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+.gradient{  
+  transform: translateX(-50%) translateY(-50%) translateX(15px) translateY(22.5px);
+  transition: transform .2s;
+  z-index: 2;
+  
+  .border{
+      path{
+        stroke-dasharray: @path_length;
+        stroke-dashoffset: -@path_length;
+        transition: stroke-dasharray 2s linear;
+        
+      &.animate{
+        animation: drawPath linear forwards infinite;
+        animation-duration: 4s;
+        stroke-dasharray: @path_length/4;
+
+        &:nth-of-type(2){
+          animation-delay: 1s;
+        }
+        &:nth-of-type(3){
+          animation-delay: 2s;
+        }
+        &:nth-of-type(4){
+          animation-delay: 2s;
+        }
+      }
+    }
+  }
+  .line{
+    path{
+      stroke-dasharray: @line_length;
+      stroke-dashoffset: -@line_length;
+      transition: stroke-dasharray 1s linear 1s;
+      
+      &.animate{
+        animation: drawPath linear forwards infinite;
+        animation-duration: 2s;
+        stroke-dasharray: @line_length/2;
+      }
+      &:nth-child(2){
+        animation-delay: 1s;
+      }
+    }    
+    &--3{
+      path{
+        stroke-dasharray: @line_length--sml;
+        stroke-dashoffset: -@line_length--sml;
+        transition: stroke-dasharray 1s linear 1s;
+        
+        &.animate{
+          stroke-dasharray: @line_length--sml/2;
+        }
+      }
+    }
+  }
+}
+
+// Safari
+
+&.no-offset{
+  animation: none !important;
+  stroke-dasharray: 0 !important;
+  stroke-dashoffset: 0px !important;
+  transition: none !important;
+}
+
+// Animations
+
+@keyframes drawPath{
+  to{
+    stroke-dashoffset: 0px;
+  }
+}
